@@ -39,4 +39,3 @@ hs_err_pid*
 /bin/
 /logs/
 !logs/.gitkeep
-f
