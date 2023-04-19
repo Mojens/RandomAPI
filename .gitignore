@@ -21,3 +21,21 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Build files
+/target/
+*.class
+
+# Lombok files
+.delombok/
+/lombok.log
+
+# Spring Boot files
+/bin/
+/logs/
+!logs/.gitkeep
