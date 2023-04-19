@@ -51,3 +51,4 @@ target/
 /bin/
 /logs/
 !logs/.gitkeep
+.DS_Store
