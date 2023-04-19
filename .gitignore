@@ -26,10 +26,22 @@ hs_err_pid*
 .vscode/
 .idea/
 *.iml
+*.ipr
+*.iws
 
 # Build files
 /target/
+*.jar
+*.war
+*.ear
 *.class
+
+# Maven files
+log/
+target/
+.settings/
+.classpath
+.project
 
 # Lombok files
 .delombok/
@@ -39,4 +51,3 @@ hs_err_pid*
 /bin/
 /logs/
 !logs/.gitkeep
-
