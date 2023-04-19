@@ -1,5 +1,6 @@
 package com.example.randomapi.configuration;
 
+import com.example.randomapi.entity.Animal;
 import com.example.randomapi.entity.Education;
 import com.example.randomapi.entity.Job;
 import com.example.randomapi.entity.Person;
@@ -12,6 +13,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Controller;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -32,6 +34,7 @@ public class Setup implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         setupPersons();
+        animalSetup();
     }
 
     public void setupPersons() {
@@ -313,5 +316,349 @@ public class Setup implements ApplicationRunner {
 
 // Save Educations to repository
         educationRepository.saveAll(List.of(edu1, edu2, edu3, edu4, edu5, edu6, edu7, edu8, edu9, edu10, edu11));
+    }
+
+    public void animalSetup() {
+        List<Animal> animals = new ArrayList<>();
+        animals.add(Animal.builder()
+                .name("Buddy")
+                .species("Dog")
+                .age(4)
+                .isDomesticated(true)
+                .gender("Male")
+                .breed("Poodle")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Lucy")
+                .species("Cat")
+                .age(2)
+                .isDomesticated(true)
+                .gender("Female")
+                .breed("Persian")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Rocky")
+                .species("Horse")
+                .age(5)
+                .isDomesticated(false)
+                .gender("Male")
+                .breed("Quarter Horse")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Fluffy")
+                .species("Rabbit")
+                .age(3)
+                .isDomesticated(true)
+                .gender("Female")
+                .breed("Angora")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Max")
+                .species("Dog")
+                .age(2)
+                .isDomesticated(true)
+                .gender("Male")
+                .breed("Labrador Retriever")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Lola")
+                .species("Parrot")
+                .age(1)
+                .isDomesticated(true)
+                .gender("Female")
+                .breed("African Grey")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Duke")
+                .species("Pig")
+                .age(3)
+                .isDomesticated(false)
+                .gender("Male")
+                .breed("Hampshire")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Chloe")
+                .species("Dog")
+                .age(4)
+                .isDomesticated(true)
+                .gender("Female")
+                .breed("British Bulldog")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Charlie")
+                .species("Snake")
+                .age(1)
+                .isDomesticated(false)
+                .gender("Male")
+                .breed("Ball Python")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Milo")
+                .species("Cat")
+                .age(2)
+                .isDomesticated(true)
+                .gender("Male")
+                .breed("Maine Coon")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Sadie")
+                .species("Hedgehog")
+                .age(6)
+                .isDomesticated(true)
+                .gender("Female")
+                .breed("African Pygmy")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Smokey")
+                .species("Cat")
+                .age(4)
+                .isDomesticated(true)
+                .gender("Male")
+                .breed("Scottish Fold")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Cooper")
+                .species("Dog")
+                .age(2)
+                .isDomesticated(true)
+                .gender("Male")
+                .breed("Boxer")
+                .build());
+        animals.add(Animal.builder()
+                .name("Oliver")
+                .species("Ferret")
+                .age(3)
+                .isDomesticated(true)
+                .gender("Male")
+                .breed("Albino")
+                .build());
+        animals.add(Animal.builder()
+                .name("Harley")
+                .species("Horse")
+                .age(5)
+                .isDomesticated(false)
+                .gender("Male")
+                .breed("Arabian")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Luna")
+                .species("Dog")
+                .age(2)
+                .isDomesticated(true)
+                .gender("Female")
+                .breed("German Shepherd")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Jackson")
+                .species("Lizard")
+                .age(4)
+                .isDomesticated(false)
+                .gender("Male")
+                .breed("Bearded Dragon")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Mia")
+                .species("Raccoon")
+                .age(1)
+                .isDomesticated(false)
+                .gender("Female")
+                .breed("Common")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Bailey")
+                .species("Dog")
+                .age(3)
+                .isDomesticated(true)
+                .gender("Female")
+                .breed("Golden Retriever")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Simba")
+                .species("Lion")
+                .age(2)
+                .isDomesticated(false)
+                .gender("Male")
+                .breed("African")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Rosie")
+                .species("Sheep")
+                .age(4)
+                .isDomesticated(true)
+                .gender("Female")
+                .breed("Merino")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Mittens")
+                .species("Hamster")
+                .age(4)
+                .isDomesticated(true)
+                .gender("Female")
+                .breed("Syrian")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Teddy")
+                .species("Dog")
+                .age(2)
+                .isDomesticated(true)
+                .gender("Male")
+                .breed("Pomeranian")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Nala")
+                .species("Tiger")
+                .age(3)
+                .isDomesticated(false)
+                .gender("Female")
+                .breed("Bengal")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Zeus")
+                .species("Bear")
+                .age(4)
+                .isDomesticated(false)
+                .gender("Male")
+                .breed("Grizzly")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Loki")
+                .species("Fox")
+                .age(2)
+                .isDomesticated(false)
+                .gender("Male")
+                .breed("Red")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Sophie")
+                .species("Dog")
+                .age(3)
+                .isDomesticated(true)
+                .gender("Female")
+                .breed("Poodle")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Misty")
+                .species("Rabbit")
+                .age(1)
+                .isDomesticated(true)
+                .gender("Female")
+                .breed("Dwarf Hotot")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Hank")
+                .species("Hippopotamus")
+                .age(2)
+                .isDomesticated(false)
+                .gender("Male")
+                .breed("Pygmy")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Cleo")
+                .species("Cat")
+                .age(2)
+                .isDomesticated(true)
+                .gender("Female")
+                .breed("Siamese")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Riley")
+                .species("Dolphin")
+                .age(4)
+                .isDomesticated(false)
+                .gender("Female")
+                .breed("Bottlenose")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Midnight")
+                .species("Bat")
+                .age(3)
+                .isDomesticated(false)
+                .gender("Male")
+                .breed("Vampire")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Toby")
+                .species("Dog")
+                .age(2)
+                .isDomesticated(true)
+                .gender("Male")
+                .breed("Corgi")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Snowball")
+                .species("Rabbit")
+                .age(1)
+                .isDomesticated(true)
+                .gender("Male")
+                .breed("Flemish Giant")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Sadie")
+                .species("Penguin")
+                .age(5)
+                .isDomesticated(false)
+                .gender("Female")
+                .breed("Emperor")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Oreo")
+                .species("Guinea Pig")
+                .age(2)
+                .isDomesticated(true)
+                .gender("Male")
+                .breed("Abyssinian")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Sammy")
+                .species("Fish")
+                .age(3)
+                .isDomesticated(true)
+                .gender("Male")
+                .breed("Goldfish")
+                .build());
+
+        animals.add(Animal.builder()
+                .name("Mittens")
+                .species("Panda")
+                .age(1)
+                .isDomesticated(false)
+                .gender("Female")
+                .breed("Giant")
+                .build());
+        animalRepository.saveAll(animals);
     }
 }
