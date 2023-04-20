@@ -3,6 +3,7 @@ package com.example.randomapi.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -19,6 +20,12 @@ public class Job {
 
     @Column
     private String title;
+
+    @Column
+    private LocalDate startDate;
+
+    @Column
+    private LocalDate endDate;
 
     @ManyToOne
     @JoinColumn
