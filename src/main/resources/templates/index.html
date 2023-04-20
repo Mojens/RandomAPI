@@ -10,9 +10,9 @@
 <body>
 <div class="container-fluid">
     <div class="row">
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-            <div class="sidebar-sticky">
-                <ul class="nav flex-column">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar position-fixed sticky-top">
+            <div class="sidebar-sticky h-100">
+                <ul class="nav flex-column position-sticky" style="top: 0;">
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Documentation</a>
                     </li>
@@ -25,10 +25,9 @@
                 </ul>
             </div>
         </nav>
+
+
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">RandomAPI</a>
-            </nav>
             <div class="mt-5">
                 <h1>Welcome to RandomAPI!</h1>
                 <p class="lead">RandomAPI is a simple API that provides random animal and person data.</p>
@@ -146,19 +145,26 @@
                             <div class="col-md-6">
                                 <h3>For /api/v1/animals:</h3>
                                 <ul>
-                                    <li><strong>species</strong> - The name of the animal species.</li>
-                                    <li><strong>color</strong> - The color of the animal.</li>
+                                    <li><strong>ID</strong> - The id of the animal</li>
+                                    <li><strong>Name</strong> - The name of the animal</li>
+                                    <li><strong>species</strong> - The species of the animal.</li>
+                                    <li><strong>gender</strong> - The gender of the animal.</li>
                                     <li><strong>weight</strong> - The weight of the animal in pounds.</li>
-                                    <li><strong>height</strong> - The height of the animal in inches.</li>
                                     <li><strong>age</strong> - The age of the animal in years.</li>
+                                    <li><strong>isDomesticated</strong> - If the animal is domesticated or not</li>
                                 </ul>
                             </div>
                             <div class="col-md-6">
                                 <h3>For /api/v1/persons:</h3>
                                 <ul>
-                                    <li><strong>name</strong> - The name of the person.</li>
+                                    <li><strong>First Name</strong> - The first name of the person.</li>
+                                    <li><strong>Last Name</strong> - The last name of the person.</li>
                                     <li><strong>age</strong> - The age of the person in years.</li>
-                                    <li><strong>job</strong> - The person's job.</li>
+                                    <li><strong>job</strong> - The persons jobs.</li>
+                                    <li><strong>Educations</strong> - The persons educations</li>
+                                    <li><strong>gender</strong> - The gender of the person.</li>
+                                    <li><strong>Date of Birth</strong> - The date when the person was born</li>
+                                    <li><strong>height</strong> - The height of the person in centimeters.</li>
                                     <li><strong>education</strong> - The person's education level.</li>
                                     <li><strong>address</strong> - The person's address.</li>
                                     <li><strong>phone</strong> - The person's phone number.</li>
