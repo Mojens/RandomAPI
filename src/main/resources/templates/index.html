@@ -1,10 +1,179 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RandomAPI - Documentation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 <body>
-
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Documentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#endpoints">Endpoints</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#usage">Usage</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">RandomAPI</a>
+            </nav>
+            <div class="mt-5">
+                <h1>Welcome to RandomAPI!</h1>
+                <p class="lead">RandomAPI is a simple API that provides random animal and person data.</p>
+                <div class="card">
+                    <div class="card-header" id="endpoints">
+                        <h2>Endpoints</h2>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>Endpoint</th>
+                                <th>Description</th>
+                                <th>Example Response</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>/api/v1/animals</td>
+                                <td>Returns a list of random animals with random data.</td>
+                                <td>
+                                <pre>
+{
+   "id": 1,
+   "name": "Buddy",
+   "species": "Dog",
+   "age": 4,
+   "gender": "Male",
+   "breed": "Poodle",
+   "domesticated": true
+}
+                                            </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>/api/v1/persons</td>
+                                <td>Returns a list of random persons with job and education data.</td>
+                                <td>
+                                <pre>
+{
+  "id": 1,
+  "firstName": "John",
+  "lastName": "Doe",
+  "age": 30,
+  "email": "john.doe@example.com",
+  "address": "123 Main St",
+  "phoneNumber": "555-1234",
+  "gender": "Male",
+  "dateOfBirth": "01-01-1993",
+  "height": 180,
+  "jobs": [
+    {
+      "title": "UX Writer",
+      "startDate": "21-04-2021",
+      "endDate": "15-03-2026"
+    },
+    {
+      "title": "Public Relations Specialist",
+      "startDate": "28-06-2018",
+      "endDate": "11-09-2020"
+    },
+    {
+      "title": "Data Scientist",
+      "startDate": "19-05-2020",
+      "endDate": "07-04-2023"
+    },
+    {
+      "title": "Database Administrator",
+      "startDate": "13-12-2020",
+      "endDate": "24-08-2021"
+    },
+    {
+      "title": "Business Analyst",
+      "startDate": "13-04-2020",
+      "endDate": "03-12-2023"
+    },
+    {
+      "title": "IT Support Specialist",
+      "startDate": "06-05-2022",
+      "endDate": "08-11-2022"
+    }
+  ],
+  "educations": [
+    {
+      "school": "University of Michigan-Ann Arbor",
+      "degree": "Doctor of Philosophy",
+      "fieldOfStudy": "Sociology",
+      "startDate": "04-05-2013",
+      "endDate": "09-03-2019"
+    },
+    {
+      "school": "University of California-Los Angeles",
+      "degree": "Doctor of Medicine",
+      "fieldOfStudy": "Political Science",
+      "startDate": "15-06-2014",
+      "endDate": "02-11-2016"
+    }
+  ]
+}
+                                </pre>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card mt-5">
+                    <div class="card-header" id="usage">
+                        <h2>Usage</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>To use RandomAPI, simply make a GET request to one of the above endpoints.</p>
+                        <p>The responses are in JSON format and include the following fields:</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>For /api/v1/animals:</h3>
+                                <ul>
+                                    <li><strong>species</strong> - The name of the animal species.</li>
+                                    <li><strong>color</strong> - The color of the animal.</li>
+                                    <li><strong>weight</strong> - The weight of the animal in pounds.</li>
+                                    <li><strong>height</strong> - The height of the animal in inches.</li>
+                                    <li><strong>age</strong> - The age of the animal in years.</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>For /api/v1/persons:</h3>
+                                <ul>
+                                    <li><strong>name</strong> - The name of the person.</li>
+                                    <li><strong>age</strong> - The age of the person in years.</li>
+                                    <li><strong>job</strong> - The person's job.</li>
+                                    <li><strong>education</strong> - The person's education level.</li>
+                                    <li><strong>address</strong> - The person's address.</li>
+                                    <li><strong>phone</strong> - The person's phone number.</li>
+                                    <li><strong>email</strong> - The person's email address.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 </html>
