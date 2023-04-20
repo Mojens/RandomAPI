@@ -1,4 +1,4 @@
-package com.example.randomapi.controller;
+package com.example.randomapi.api;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

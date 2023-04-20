@@ -1,7 +1,7 @@
-package com.example.randomapi.controller;
+package com.example.randomapi.api;
 
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class AnimalController {
+public class PersonController {
 }
